@@ -1,7 +1,7 @@
 #include<stdio.h>
 /**
  *main - c program that prints that use the function puts
- *return (0)
+ *return:0
  */
 int main(void)
 {
