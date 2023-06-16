@@ -2,8 +2,9 @@
 #include <time.h>
 #include <stdio.h>
 /*
- * main - Determines a number sign.
- * Return: Always 0
+ * main - Determines if n number is positive, negative or zero.
+ *
+ * Return: Always 0 (success)
  */
 int main(void)
 {
