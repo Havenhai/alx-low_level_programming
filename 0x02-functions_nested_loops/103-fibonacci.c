@@ -15,7 +15,7 @@ int main(void)
 	{
 	k += y;
 	if (k % 2 == 0)
-		sum += k
+		sum += k;
 			y = k - y;
 	++h;
 	}
