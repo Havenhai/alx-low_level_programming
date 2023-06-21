@@ -10,7 +10,7 @@ int main(void)
 {
 	int h, y = 0;
 
-	while (i < 1024)
+	while (h < 1024)
 	{
 	if ((h % 3 == 0) || (h % 5 == 0))
 	{
