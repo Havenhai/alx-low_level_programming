@@ -37,7 +37,7 @@ void print_to_98(int Z)
 	}
 	else
 	{
-	printf("%d,", Z);
+	printf("%d, ", Z);
 	}
 	}
 	}
