@@ -11,7 +11,7 @@ int main(void)
 	int h = 0;
 	long t = 1, k = 2;
 
-	while (i < 50)
+	while (h < 50)
 	{
 	if (h == 0)
 		printf("%ld", t);
