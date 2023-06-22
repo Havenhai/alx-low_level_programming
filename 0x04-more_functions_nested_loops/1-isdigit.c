@@ -11,7 +11,7 @@
 int _isdigit(int z)
 
 {
-	if (z >= 0 && z <= 9)
+	if (z >= '0' && z <= '9')
 		return (1);
 	else
 		return (0);
