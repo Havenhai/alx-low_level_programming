@@ -10,7 +10,7 @@
 
 int _isupper(int h)
 {
-	if (h >= 65 && x <= 90)
+	if (h >= 65 && h <= 90)
 	{
 		return (1);
 	}
