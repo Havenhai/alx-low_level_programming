@@ -5,7 +5,7 @@ int _outchar(char c);
 
 int _isupper(int h);
 
-int _isdigit(int c);
+int _isdigit(int z);
 
 int mul(int a, int b);
 
