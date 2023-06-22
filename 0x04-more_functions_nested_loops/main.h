@@ -7,7 +7,7 @@ int _isupper(int h);
 
 int _isdigit(int z);
 
-int mul(int a, int b);
+int mul(int num1, int num2);
 
 void print_numbers(void);
 
