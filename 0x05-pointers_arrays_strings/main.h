@@ -6,8 +6,8 @@
 
 int _putchar(char h);
 void reset_to_98(int *h);
-void swap_int(int *a, int *b);
-int _strlen(char *s);
+void swap_int(int *h, int *t);
+int _strlen(char *string);
 void _puts(char *str);
 void print_rev(char *s);
 void rev_string(char *s);
