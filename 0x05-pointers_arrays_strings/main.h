@@ -9,7 +9,7 @@ void reset_to_98(int *h);
 void swap_int(int *h, int *t);
 int _strlen(char *string);
 void _puts(char *haven);
-void print_rev(char *s);
+void print_rev(char *ha);
 void rev_string(char *s);
 void puts2(char *str);
 void puts_half(char *str);
