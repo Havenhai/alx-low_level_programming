@@ -11,7 +11,7 @@ char *cap_string(char *stri)
 
 	while (stri[index])
 	{
-		while (!(stri[index] >= 97 && stri[index] <= 122))
+		while (!(stri[index] >= 'a' && stri[index] <= 'z'))
 			index++;
 
 		if (stri[index - 1] == ' ' ||
