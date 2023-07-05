@@ -9,6 +9,7 @@ int factorial(int num);
 int _pow_recursion(int h, int t);
 int _sqrt_recursion(int h);
 int is_prime_number(int h);
-int is_palindrome(char *s);
+int is_palindrome(char *h);
+int wildcmp(char *string1, char *string2);
 
 #endif
