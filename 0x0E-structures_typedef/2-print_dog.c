@@ -4,27 +4,21 @@
 
 /**
  * print_dog - prints a struct dog
- * @hh: struct dog to print
+ * @d: struct dog to print
  * If an element of d is NULL, print (nil) instead of this element.
  * if name is NULL, print Name: (nil)
- * If hh is NULL print nothing
+ * If d is NULL print nothing
  */
 
-void print_dog(struct dog *hh)
+void print_dog(struct dog *d)
 {
-	if (hh == NULL)
+	if (d == NULL)
 		return;
 
-	if (hh->name == NULL)
-		printf("name: (nil)\n");
-	else
-		printf("name: %s\n", hh->name);
-	if (hh->age < 0)
-		printf("age: (nil)\n");
-	else
-		printf("age: %f\n", hh->age);
-	if (hh->owner == NULL)
-		printf("owner: (nil)\n");
-	else
-		printf("owner: %s\n", hh->owner);
+	if (d->name == NULL)
+		d->name = "(nil)";
+	if (d->owner == NULL)
+		d->owner = "(nil)";
+
+	printf("Name: %s\nAge: %f\nOwner: %s\n", d->name, d->age, d->owner);
 }
