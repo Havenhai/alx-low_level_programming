@@ -5,7 +5,8 @@
  * get_op_func - Selects the correct function to perform
  *               the operation asked by the user.
  * @hh: The operator passed as argument.
- * If hh doesnt match any of the expected operators (+, -, *, /, %), return NULL
+ * If hh doesnt match any of the expected operators
+ * (+, -, *, /, %), return NULL
  * Return: A pointer to the function corresponding
  *         to the operator given as a parameter.
  */
