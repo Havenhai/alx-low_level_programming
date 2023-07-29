@@ -4,7 +4,7 @@
 /**
  * print_list - functions prints all elements of a list_t list
  * @have: pointer to the list_t list
- * If str is NULL, print [0] (nil)
+ * If strings is NULL, print [0] (nil)
  * Return: the number of nodes printed
  */
 
@@ -14,11 +14,11 @@ size_t print_list(const list_t *have)
 
 	while (have)
 	{
-		if (!have->str)
+		if (!have->strings)
 			printf("[0] (nil)\n");
 		else
-			printf("[%u] %s\n", have->len, have->str);
-	have = have->next;/*next points to the next node in the list*/
+			printf("[%u] %s\n", have->length, have->strings);
+	have = have->next_node;/*next points to the next node in the list*/
 	coun++;
 	}
 

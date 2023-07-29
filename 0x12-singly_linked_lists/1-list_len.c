@@ -16,7 +16,7 @@ size_t list_len(const list_t *have)
 	while (have)
 	{
 		con++;
-		have = have->next;
+		have = have->next_node;
 	}
 	return (con);
 }

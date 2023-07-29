@@ -12,8 +12,8 @@ void free_list(list_t *head)
 
 	while (head)
 	{
-		temporary_pointer = head->next;
-		free(head->str);
+		temporary_pointer = head->next_node;
+		free(head->strings);
 		free(head);
 		head = temporary_pointer;
 	}
