@@ -2,12 +2,12 @@
 
 /**
  * _putchar - Writes characters hav to stdout
- * @hav: The character to print
+ * @c: The character to print
  *
  * Return: 1.
  * On error, -1 is returned.
  */
-int _putchar(char hav)
+int _putchar(char c)
 {
-	return (write(1, &hav, 1));
+	return (write(1, &c, 1));
 }
