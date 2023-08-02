@@ -2,7 +2,7 @@
 
 /**
  * pop_listint - c function deletes the head node of a linked list
- * @head: DOUBLE pointer 
+ * @head: DOUBLE pointer
  * Free the memory occupied by the old head node using free.
  * Return: numo  Data inside the elements that was deleted
  * 0 if list is empty
