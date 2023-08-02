@@ -18,10 +18,10 @@ size_t free_listint_safe(listint_t **have)
 
 	while (*have)
 	{
-		difference = *have - (*have)->next_node;
+		difference = *have - (*have)->next;
 		if (difference > 0)
 		{
-			tempor = (*have)->next_node;
+			tempor = (*have)->next;
 			free(*have);
 			*have = tempor;
 			length++;

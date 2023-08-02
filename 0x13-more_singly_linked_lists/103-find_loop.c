@@ -14,17 +14,17 @@ listint_t *find_listint_loop(listint_t *head)
 	if (!head)
 		return (NULL);
 
-	while (slowest && fastest && fastest->next_node)
+	while (slowest && fastest && fastest->next)
 	{
-		fastest = fastest->next_node->next_node;
-		slowest = slowest->next_node;
+		fastest = fastest->next->next;
+		slowest = slowest->next;
 		if (fastest == slowest)
 		{
 			slowest = head;
 			while (slowest != fastest)
 			{
-				slowest = slowest->next_node;
-				fastest = fastest->next_node;
+				slowest = slowest->next;
+				fastest = fastest->next;
 			}
 			return (fastest);
 		}
