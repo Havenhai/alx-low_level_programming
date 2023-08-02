@@ -8,16 +8,17 @@
 
 void free_listint2(listint_t **head)
 {
-	listint_t *temp;/*declares temporary pointer*/
+	listint_t *temporary_pointer;/*declares temporary pointer*/
+
 
 	if (head == NULL)/*if null, no linked list to free*/
 		return;
 
 	while (*head)
 	{
-		temp = (*head)->next_node;
+		temporary_pointer = (*head)->next;
 		free(*head);
-		*head = temp;
+		*head = temporary_pointer;
 	}
 
 	*head = NULL;

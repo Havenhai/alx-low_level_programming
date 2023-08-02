@@ -7,12 +7,12 @@
  */
 void free_listint(listint_t *head)
 {
-	listint_t *temp;/*temporarily store the next nodein a list*/
+	listint_t *tempor;/*temporarily store the next nodein a list*/
 
 	while (head)
 	{
-		temp = head->next_node;
+		tempor = head->next;
 		free(head);/*Deallocates the memory occupied*/
-		head = temp;/*updateed*/
+		head = tempor;/*updateed*/
 	}
 }
