@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_at_ind - Insert node in linked list specified position
+ * insert_nodeint_at_index - Insert node in linked list specified position
  * Function takes three parameters.
  * @n: THE data to be inserted in the new node
  * @head: Double pointer to the first node in the list
