@@ -3,31 +3,31 @@
 /**
  * add_nodeint_end - Function adds a node at the end of linked list
  * @head: Double pointer to the first element in the list
- * @ntimes: Data to insert in new element(integer)
+ * @n: Data to insert in new element(integer)
  * Return: New node, or NULL if it fails
  */
-listint_t *add_nodeint_end(listint_t **head, const int ntimes)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	listint_t *new;
-	listint_t *temp = *head;
+	listint_t *new_node;
+	listint_t *tempor = *head;
 
-	new = malloc(sizeof(listint_t));
-	if (!new)
+	new_node = malloc(sizeof(listint_t));
+	if (!new_node)
 		return (NULL);
 
-	new->ntimes = ntimes;
-	new->next_node = NULL;
+	new_node->n = n;
+	new_node->next = NULL;
 
 	if (*head == NULL)
 	{
-		*head = new;
-		return (new);
+		*head = new_node;
+		return (new_node);
 	}
 
-	while (temp->next_node)
-		temp = temp->next_node;
+	while (temppor->next)
+		tempor = tempor->next;
 
-	temp->next_node = new;
+	tempor->next = new_node;
 
-	return (new);
+	return (new_node);
 }

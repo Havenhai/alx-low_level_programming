@@ -17,7 +17,7 @@ size_t listint_len(const listint_t *have)
 	while (have)
 	{
 		number_counter++;
-		have = have->next_node;/*traverses the linked list to the next_node*/
+		have = have->next;/*traverses the linked list to the next*/
 	}
 
 	return (number_counter);/*total number of elements in the linked list*/
