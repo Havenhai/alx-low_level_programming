@@ -20,22 +20,22 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 	if (index == 0)
 	{
-		*head = (*head)->next_node;
+		*head = (*head)->next;
 		free(tempor);
 		return (1);
 	}
 
 	while (hyt < index - 1)
 	{
-		if (!tempor || !(tempor->next_node))
+		if (!tempor || !(tempor->next))
 			return (-1);
-		tempor = tempor->next_node;
+		tempor = tempor->next;
 		hyt++;
 	}
 
 
-	current_position = tempor->next_node;
-	tempor->next_node = current_position->next_node;
+	current_position = tempor->next;
+	tempor->next = current_position->next;
 	free(current_position);
 
 	return (1);

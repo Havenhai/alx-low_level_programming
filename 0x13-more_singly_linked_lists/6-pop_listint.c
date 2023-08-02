@@ -1,26 +1,25 @@
 #include "lists.h"
 
 /**
- * pop_listint - Used to Deletes the head node of a linked list
- * @head: Double pointer to the first element in the linked list
- * Declares a temporary variable temp of type listint_t and
- * an integer variable hyt
- * Return: the data inside the elements that was deleted,
- * or 0 if the list is empty
+ * pop_listint - c function deletes the head node of a linked list
+ * @head: DOUBLE pointer 
+ * Free the memory occupied by the old head node using free.
+ * Return: numo  Data inside the elements that was deleted
+ * 0 if list is empty
  */
 int pop_listint(listint_t **head)
 {
-	listint_t *temp;
-	int hyt;
+	listint_t *Temporary_pointer;
+	int numo;
 
 	if (!head || !*head)
 		return (0);
 
-	hyt = (*head)->ntimes;
-	temp = (*head)->next_node;
+	numo = (*head)->n;
+	Temporary_pointer = (*head)->next;
 	free(*head);
-	*head = temp;
+	*head = Temporary_pointer;
 
-	return (hyt);
+	return (numo);
 }
 
