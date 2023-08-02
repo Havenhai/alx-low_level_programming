@@ -16,9 +16,9 @@ size_t print_listint (const listint_t *have)
 
 	while (have)
 	{
-		printf("%d\n", have->ntimes);
+		printf("%d\n", have->n);
 		number_counter++;
-		have = have->next_node;
+		have = have->next;
 	}
 
 	return (number_counter);

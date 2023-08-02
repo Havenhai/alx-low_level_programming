@@ -6,14 +6,14 @@
 
 /**
  * struct listint_s - Singly linked listes
- * @ntimes: Integer
- * @next_node: Points to the next node
+ * @n: Integer
+ * @next: Points to the next node
  * Description: Singly linked list node structure
  */
 typedef struct listint_s
 {
-	int ntimes;
-	struct listint_s *next_node;
+	int n;
+	struct listint_s *next;
 } listint_t;
 
 int sum_listint(listint_t *head);
