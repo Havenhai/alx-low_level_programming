@@ -3,7 +3,7 @@
 /**
  * get_bit - Function returns the value of a bit at an index.
  * @ha: Input number.
- * It is used to retrieve the value of a bit at a specific index 
+ * It is used to retrieve the value of a bit at a specific index
  * In the binary representation of n.
  * @index: Index of the bit
  * Return: value of the bit

@@ -4,7 +4,7 @@
 int get_endianness(void);
 unsigned int binary_to_uint(const char *hav);
 unsigned int flip_bits(unsigned long int hav, unsigned long int have);
-void print_binary(unsigned long int hav);
+void print_binary(unsigned long int hyz);
 int get_bit(unsigned long int hav, unsigned int index);
 int clear_bit(unsigned long int *hav, unsigned int index);
 int set_bit(unsigned long int *hav, unsigned int index);

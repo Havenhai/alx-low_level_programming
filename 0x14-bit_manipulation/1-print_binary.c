@@ -5,7 +5,7 @@
  * The code defines a function called print_binary
  * That takes an unsigned long int hyz as input and
  * Prints its binary representation.
- * hyz: Input number to print in binary
+ * @hyz: Input number to print in binary
  */
 void print_binary(unsigned long int hyz)
 {
