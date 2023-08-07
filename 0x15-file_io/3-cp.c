@@ -2,14 +2,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void close_file(int filedescription);
+void closed_file(int filedescription);
 char *Allocated_buffer(char *files);
 
 /**
- * Allocated__buffer - a Function that Allocates 1024 bytes for a buffer.
+ * Allocated_buffer - a Function that Allocates 1024 bytes for a buffer.
  * Function takes one argument: the name of the file that.
  * The buffer will be storing characters for.
- * @file: The name of the file buffer
+ * @files: The name of the file buffer
  * If the buffer cannot be allocated, the function prints an error message
  * And exits with code 99.
  * Return: Newly-allocated buffer.
@@ -17,18 +17,18 @@ char *Allocated_buffer(char *files);
 
 char *Allocated_buffer(char *files)
 {
-        char *buffer_allocated;
+char *buffer_allocated;
 
-        buffer_allocated = malloc(sizeof(char) * 1024);
+buffer_allocated = malloc(sizeof(char) * 1024);
 
-        if (buffer_allocated == NULL)
-        {
-                dprintf(STDERR_FILENO,
-                        "Error: Can't write to %s\n", files);
-                exit(99);
-        }
+if (buffer_allocated == NULL)
+{
+dprintf(STDERR_FILENO,
+"Error: Can't write to %s\n", files);
+exit(99);
+}
 
-        return (buffer_allocated);
+return (buffer_allocated);
 }
 
 /**
@@ -39,15 +39,15 @@ char *Allocated_buffer(char *files)
  */
 void Closed_file(int filedescription)
 {
-        int closed;
+int closed;
 
-        closed = close(filedescription);
+closed = close(filedescription);
 
-        if (closed == -1)
-        {
-        dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", filedescription);
-                exit(100);
-        }
+if (closed == -1)
+{
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", filedescription);
+exit(100);
+}
 }
 /**
  * main - C Function that Copies the contents of a file to another file.
