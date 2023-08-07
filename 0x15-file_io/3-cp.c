@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void closed_file(int filedescription);
 char *Allocated_buffer(char *files);
+void close_file(int filedescription);
 
 /**
  * Allocated_buffer - a Function that Allocates 1024 bytes for a buffer.
@@ -32,20 +32,20 @@ return (buffer_allocated);
 }
 
 /**
- * Closed_file - The function takes one argument file descriptor to be closed.
+ * Close_file - The function takes one argument file descriptor to be closed.
  * The variable closed will be used to store the
  * Return value of the close() function.
  * @filedescription: The file descriptor to closed.
  */
-void Closed_file(int filedescription)
+void Close_file(int filedescription)
 {
-int closed;
+int clo;
 
-closed = close(filedescription);
+clo = close(filedescription);
 
-if (closed == -1)
+if (clo == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", filedescription);
+	dprintf(STDERR_FILENO, "Error: Can't close fdtion %d\n", filedescription);
 exit(100);
 }
 }
@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
 
 	bufferstro = Allocated_buffer(argv[2]);
 	from = open(argv[1], O_RDONLY);
-	re = read(from, buffer, 1024);
+	re = read(from, bufferstro, 1024);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
@@ -106,4 +106,3 @@ int main(int argc, char *argv[])
 
 	return (0);
 }
-
