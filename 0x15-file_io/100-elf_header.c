@@ -7,7 +7,7 @@
 #include <stdlib.h>
 
 void PRINT_MAGIC(unsigned char *e_ident);
-void CLOSE_ELF(int elf);
+void close_elf(int elf);
 void CHECK_ELF(unsigned char *e_ident);
 void PRINT_CLASS(unsigned char *e_ident);
 void PRINT_DATA(unsigned char *e_ident);
@@ -262,13 +262,13 @@ void PRINT_ENTRY(unsigned long int e_entry, unsigned char *e_ident)
 }
 
 /**
- * CLOSED_ELF - IN C that Closes an ELF file.
+ * close_elf - IN C that Closes an ELF file.
  * @elf: FILE DESCRIPTION of the ELF file.
  * uses the CLOSE() system call to close the file.
  * If the file cannot be CLOSED, then the function prints
  * an ERROR message and exits with the status code 98.
  */
-void CLOSED_ELF(int elf)
+void close_elf(int elf)
 {
 	if (close(elf) == -1)
 	{
@@ -299,7 +299,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	header = malloc(sizeof(Elf64_Ehdr));
 	if (header == NULL)
 	{
-		CLOSE_ELF(ou);
+		close_elf(ou);
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
 	}
@@ -307,7 +307,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	if (re == -1)
 	{
 		free(header);
-	CLOSE_ELF(ou);
+	close_elf(ou);
 		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
 		exit(98);
 	}
@@ -324,6 +324,6 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	PRINT_ENTRY(header->e_entry, header->e_ident);
 
 	free(header);
-	CLOSE_ELF(ou);
+	close_elf(ou);
 	return (0);
 }
