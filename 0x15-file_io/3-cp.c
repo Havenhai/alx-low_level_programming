@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 char *Allocated_buffer(char *files);
-void Close_file(int filedescription);
+void close_file(int filedescription);
 
 /**
  * Allocated_buffer - a Function that Allocates 1024 bytes for a buffer.
@@ -32,12 +32,12 @@ return (buffer_allocated);
 }
 
 /**
- * Close_file - The function takes one argument file descriptor to be closed.
+ * close_file - The function takes one argument file descriptor to be closed.
  * The variable closed will be used to store the
  * Return value of the close() function.
  * @filedescription: The file descriptor to closed.
  */
-void Close_file(int filedescription)
+void close_file(int filedescription)
 {
 int clo;
 
@@ -101,8 +101,8 @@ int main(int argc, char *argv[])
 	} while (re > 0);
 
 	free(bufferstro);
-	Close_file(from);
-	Close_file(to);
+	close_file(from);
+	close_file(to);
 
 	return (0);
 }
