@@ -262,7 +262,7 @@ void PRINT_ENTRY(unsigned long int e_entry, unsigned char *e_ident)
 }
 
 /**
- * close_elf - IN C that Closes an ELF file.
+ * close_elf -IN C that Closes an ELF file.
  * @elf: FILE DESCRIPTION of the ELF file.
  * uses the CLOSE() system call to close the file.
  * If the file cannot be CLOSED, then the function prints
@@ -287,43 +287,43 @@ void close_elf(int elf)
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	Elf64_Ehdr *header;
-	int ou, re;
+Elf64_Ehdr *header;
+int ou, re;
 
-	ou = open(argv[1], O_RDONLY);
-	if (ou == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
-		exit(98);
-	}
-	header = malloc(sizeof(Elf64_Ehdr));
-	if (header == NULL)
-	{
-		close_elf(ou);
-		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
-		exit(98);
-	}
-	re = read(ou, header, sizeof(Elf64_Ehdr));
-	if (re == -1)
-	{
-		free(header);
-	close_elf(ou);
-		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
-		exit(98);
-	}
-	
-	CHECK_ELF(header->e_ident);
-	printf("ELF Header:\n");
-	PRINT_MAGIC(header->e_ident);
-	PRINT_CLASS(header->e_ident);
-	PRINT_DATA(header->e_ident);
-	PRINT_VERSION(header->e_ident);
-	PRINT_OSABI(header->e_ident);
-	PRINT_ABI(header->e_ident);
-	PRINT_TYPE(header->e_type, header->e_ident);
-	PRINT_ENTRY(header->e_entry, header->e_ident);
+ou = open(argv[1], O_RDONLY);
+if (ou == -1)
+{
+dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
+exit(98);
+}
+header = malloc(sizeof(Elf64_Ehdr));
+if (header == NULL)
+{
+close_elf(ou);
+dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
+exit(98);
+}
+re = read(ou, header, sizeof(Elf64_Ehdr));
+if (re == -1)
+{
+free(header);
+close_elf(ou);
+dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
+exit(98);
+}
 
-	free(header);
-	close_elf(ou);
+CHECK_ELF(header->e_ident);
+printf("ELF Header:\n");
+PRINT_MAGIC(header->e_ident);
+PRINT_CLASS(header->e_ident);
+PRINT_DATA(header->e_ident);
+PRINT_VERSION(header->e_ident);
+PRINT_OSABI(header->e_ident);
+PRINT_ABI(header->e_ident);
+PRINT_TYPE(header->e_type, header->e_ident);
+PRINT_ENTRY(header->e_entry, header->e_ident);
+
+free(header);
+close_elf(ou);
 	return (0);
 }
