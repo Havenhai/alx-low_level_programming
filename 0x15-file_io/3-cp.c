@@ -54,11 +54,6 @@ exit(100);
  * @argc: A number of argument
  * The program takes two arguments: the name of the file to copy from
  * Description: And the name of the file to copy to.
- * @close_file: name of the file.
- * * Description: If the argument count is incorrect - exit code 97.
- * If file_from does not exist or cannot be read - exit code 98.
- * If file_to cannot be created or written to - exit code 99.
- * If file_to or file_from cannot be closed - exit code 100.
  * @argv: THE array of pointers.
  * Return: The program returns 0 on success.
  */
