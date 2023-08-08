@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 char *Allocated_buffer(char *files);
-void close_file(int filedescription);
+void Close_file(int filedescription);
 
 /**
  * Allocated_buffer - a Function that Allocates 1024 bytes for a buffer.
@@ -101,8 +101,8 @@ int main(int argc, char *argv[])
 	} while (re > 0);
 
 	free(bufferstro);
-	close_file(from);
-	close_file(to);
+	Close_file(from);
+	Close_file(to);
 
 	return (0);
 }
