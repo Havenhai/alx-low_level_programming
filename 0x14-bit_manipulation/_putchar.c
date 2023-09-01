@@ -2,11 +2,11 @@
 #include <unistd.h>
 
 /**
- * custom_putchar - Write a character to the standard output.
- * @output_character: The character to be written.
+ * _putchar - Write a character to the standard output.
+ * @character: The character to be written.
  *
  * This function takes a single character
- * 'output_character' as a parameter and
+ * 'character' as a parameter and
  * utilizes the 'write' system call to write
  * the character to the standard output.
  * The function returns the number of bytes
