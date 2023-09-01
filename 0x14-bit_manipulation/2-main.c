@@ -8,13 +8,13 @@
  */
 int main(void)
 {
-    int num_sys_base;
+    int n;
 
-    num_sys_base = Get_bit(1024, 10);
-    printf("%d\n", num_sys_base);
-    num_sys_base = Get_bit(98, 1);
-    printf("%d\n", num_sys_base);
-    num_sys_base = Get_bit(1024, 0);
-    printf("%d\n", num_sys_base);
+    n = get_bit(1024, 10);
+    printf("%d\n", n);
+    n = get_bit(98, 1);
+    printf("%d\n", n);
+    n = get_bit(1024, 0);
+    printf("%d\n", n);
     return (0);
 }

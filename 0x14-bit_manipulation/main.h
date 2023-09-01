@@ -2,7 +2,7 @@
 #define MAIN_H
 
 unsigned int binary_to_uint(const char *b);
-int Get_bit(unsigned long int num_sys_base, unsigned int index_bit);
+int get_bit(unsigned long int num_sys_base, unsigned int index_bit);
 int set_bit(unsigned long int *numeral_sys, unsigned int index_havubit);
 int get_endianness(void);
 int clear_bit(unsigned long int *num_havu_base, unsigned int bit_havu_idx);

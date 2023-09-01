@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * Get_bit - Retrieves the value of a bit
+ * get_bit - Retrieves the value of a bit
  * At a specific index in a decimal number.
  * This function takes an unsigned long integer
  * 'num_sys_base' as its parameter,
@@ -19,7 +19,7 @@
  * Return: Value of the bit at the specified index (0 or 1)
  * or -1 if index is invalid.
  */
-int Get_bit(unsigned long int num_sys_base, unsigned int index_bit)
+int get_bit(unsigned long int num_sys_base, unsigned int index_bit)
 {
 	int bit_val_res;
 
