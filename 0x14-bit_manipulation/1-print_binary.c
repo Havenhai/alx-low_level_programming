@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * Print_binary - Prints binary equivalent of decimal number.
+ * print_binary - Prints binary equivalent of decimal number.
  * This function takes unsigned long integer 'n_deci' as parameter,
  * representing a decimal number.
  * It converts the decimal number into its
@@ -14,7 +14,7 @@
  * @n_deci: The decimal number to be converted
  * and printed in binary.
  */
-void Print_binary(unsigned long int n_deci)
+void print_binary(unsigned long int n_deci)
 {
 	int current_bit_pos, bit = 0;
 	unsigned long int current_bit;
