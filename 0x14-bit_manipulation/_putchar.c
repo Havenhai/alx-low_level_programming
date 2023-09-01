@@ -14,11 +14,11 @@
  * error, it returns -1 and sets 'errno'
  * to indicate the specific error that occurred.
  *
- * @output_character: The character to write the standard output.
+ * @character: The character to write the standard output.
  * Return: The number of bytes written on success,
  * or -1 on error.
  */
-int custom_putchar(char output_character)
+int _putchar(char character)
 {
-	return (write(1, &output_character, 1));
+	return (write(1, &character, 1));
 }

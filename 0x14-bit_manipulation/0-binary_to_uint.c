@@ -27,7 +27,7 @@ unsigned int binary_strg_to_uint(const char *bina)
 	if (!bina)
 		return (0);
 
-	for (binary_i = 0; bina[binary_i]; i++)
+	for (binary_i = 0; bina[binary_i]; binary_i++)
 	{
 		if (bina[binary_i] < '0' || bina[binary_i] > '1')
 			return (0);
