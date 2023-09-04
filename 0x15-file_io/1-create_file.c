@@ -1,33 +1,39 @@
 #include "main.h"
 
 /**
- * create_file - havu function creates a file.
- * @filename: A pointer to the name of the file to create.
- * @text_content: A pointer to a string to write to the file.
+ * create_file - Creates a new file and writes content into it.
+ * @target_filename: A pointer to the name of the file to be created.
+ * @file_content: A pointer to string containing data to write file.
  *
- * Return: If the function fails - -1.
- *         Otherwise - 1.
+ * Return: If the function fails - returns -1.
+ *         Otherwise - returns 1.
  */
-int create_file(const char *filename, char *text_content)
+int create_file(const char *target_filename, char *file_content)
 {
-	int fd, w, len = 0;
+	int file_descriptor, write_result, content_length = 0;
 
-	if (filename == NULL)
-		return (-1);
+	if (target_filename == NULL)
+	return (-1);
 
-	if (text_content != NULL)
+if (file_content != NULL)
 	{
-		for (len = 0; text_content[len];)
-			len++;
-	}
+/*Calculate the length of the file content*/
+for (content_length = 0; file_content[content_length];)
+content_length++;
+}
+/* Open or create the target file with read and write permissions*/
+file_descriptor = open(target_filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 
-	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-	w = write(fd, text_content, len);
+/*Write the file content to the file*/
+write_result = write(file_descriptor, file_content, content_length);
 
-	if (fd == -1 || w == -1)
-		return (-1);
+/* Check for errors in file creation or content writing*/
+if (file_descriptor == -1 || write_result == -1)
+return (-1);
 
-	close(fd);
+/*Close the file descriptor*/
+close(file_descriptor);
 
-	return (1);
+/* Return 1 to indicate success*/
+return (1);
 }
