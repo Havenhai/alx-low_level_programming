@@ -8,10 +8,10 @@
  **/
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *aux_node = *head;
-	dlistint_t *node_to_delete = *head;
-	unsigned int idx;
-	unsigned int cont = 0;
+	dlistint_t *aux_node_hav = *head;
+	dlistint_t *node_to_delete_hav = *head;
+	unsigned int idx_hav;
+	unsigned int cont_hav = 0;
 
 	/* border case for empty list */
 	if (!(*head))
@@ -20,29 +20,29 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	/* border case for delete at the beginning */
 	if (index == 0)
 	{
-		*head = node_to_delete->next;
-		free(node_to_delete);
+		*head = node_to_delete_hav->next;
+		free(node_to_delete_hav);
 		if (*head)
 			(*head)->prev = NULL;
 		return (1);
 	}
 
 	/* search of position to delete */
-	idx = index - 1;
-	while (aux_node && cont != idx)
+	idx_hav = index - 1;
+	while (aux_node_hav && cont_hav != idx_hav)
 	{
-		cont++;
-		aux_node = aux_node->next;
+		cont_hav++;
+		aux_node_hav = aux_node_hav->next;
 	}
 
 	/* general case */
-	if (cont == idx && aux_node)
+	if (cont_hav == idx_hav && aux_node_hav)
 	{
-		node_to_delete = aux_node->next;
-		if (node_to_delete->next)
-		node_to_delete->next->prev = aux_node;
-		aux_node->next = node_to_delete->next;
-		free(node_to_delete);
+		node_to_delete_hav = aux_node_hav->next;
+		if (node_to_delete_hav->next)
+		node_to_delete_hav->next->prev = aux_node_hav;
+		aux_node_hav->next = node_to_delete_hav->next;
+		free(node_to_delete_hav);
 		return (1);
 	}
 
