@@ -22,14 +22,14 @@
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	dlistint_t *node = head;
-	unsigned int cont_hav = 0;
+	unsigned int cont = 0;
 
-	while (node && cont_hav != index)
+	while (node && cont != index)
 	{
-		cont_hav++;
+		cont++;
 		node = node->next;
 	}
-	if (node && cont_hav == index)
+	if (node && cont == index)
 		return (node);
 	return (NULL);
 }
