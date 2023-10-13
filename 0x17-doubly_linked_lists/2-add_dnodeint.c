@@ -1,15 +1,16 @@
 #include "lists.h"
 
 /**
+ * add_dnodeint - Inserts a new node at the beginning
+ * of a doubly linked list.
  * dlistint_len - Counts and returns the number of
  * elements in a doubly linked list.
- *
+ * @head: A pointer to the pointer that points to
+ * the first element of the list.
+ * @n: The integer value to set in the new node.
  * This function traverses a doubly linked
  * list of type `dlistint_t` and counts the
  * number of elements (nodes) within the list.
- *
- * @h: A pointer to the head of the doubly linked list.
- *
  * Return: The number of nodes in the list
  * which represents its length.
  */
